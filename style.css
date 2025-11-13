@@ -148,6 +148,7 @@ table {
 html{
     background-color: var(--background);
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 /* type */
@@ -185,7 +186,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
-    padding: 0.25em 1.75em;
+    padding: 0.25em 3em 0.25em 1.75em;
     box-sizing: border-box;
     background-color: var(--header);
     align-items: center;
@@ -221,7 +222,7 @@ footer{
     width: 100vw;
     height: 28em;
     margin-top: -15em;
-    padding: 0.25em 1.75em 1em 1.75em;
+    padding: 0.25em 2em 1em 2em;
     box-sizing: border-box;
     background-image: url('images/footer.png');
     background-position-y: bottom;
@@ -257,6 +258,7 @@ main{
 
 .project-page{
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .project-page footer{
@@ -318,7 +320,7 @@ section.banner{
     width: 100vw;
     height: 23vw;
     box-sizing: border-box;
-    padding: 0.25em 50% 2.5em 5em;
+    padding: 0.25em 50% 2.5em 7em;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -379,8 +381,8 @@ section.about{
     display: flex;
     flex-direction: row;
     row-gap: 2em;
+    column-gap: 2%;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .projects>a{
@@ -432,6 +434,18 @@ section.about{
     backdrop-filter: opacity(.4);
     text-decoration: none !important;
 }
+
+.coming-soon{
+    text-decoration: none !important;
+}
+
+.coming-soon div{
+    display: flex !important;
+        backdrop-filter: saturation(0);
+
+}
+
+
 
 
 @media screen and (max-width: 1200px) { 
