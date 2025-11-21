@@ -513,6 +513,7 @@ section.about{
 
 .coming-soon{
     text-decoration: none !important;
+    cursor: progress;
 }
 
 .coming-soon div{
