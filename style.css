@@ -180,6 +180,22 @@ a:hover, .active{
     text-underline-offset: 3px !important;
 }
 
+.button, .button:hover{
+    text-decoration: none !important;
+    margin-top:0.5em;
+    padding:0.5em 1em;
+    width:fit-content;
+    border-radius: 3em;
+}
+
+.button{
+    background-color: var(--header);
+}
+
+.button:hover{
+    background-color: var(--background);
+}
+
 /* header */
 header{
     display: flex;
@@ -265,7 +281,10 @@ main{
     position:relative;
     margin-top: 10em;
     bottom:0;
+    background-image: none;
+    height: 10em;
 }
+
 
 section.project-header{
     width: 100vw;
@@ -279,8 +298,9 @@ section.project-header{
 }
 
 .project-page main{
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 15em;
+    padding-right: 15em;
+    row-gap: 0.5em;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -294,7 +314,7 @@ section.project-header{
     gap: 0.75em
 }
 
-.project-page .full-width img, .project-page .half-width img{
+.project-page img, .project-page img{
     width:100%;
 }
 
@@ -302,15 +322,52 @@ section.project-header{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 3em;
 }
 
 .image-row .half-width{
     width: 49.5%;
+    height: auto;
 }
 
-.project-page main>sub, .project-page main>p{
+.image-row .sixty-width{
+    width: 66%;
+    height: auto;
+}
+
+.image-row .thirty-width{
+    width: 33%;
+    height: auto;
+}
+
+.image-row .quarter-width{
+    width: 24.5%;
+    height: auto;
+}
+
+.medium-portrait img{
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.medium-landscape img{
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.large-portrait img{
+    aspect-ratio: 9/16;
+    object-fit: contain;
+}
+
+.large-landscape img{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.project-page main>p{
     margin-bottom: 3em;
-    margin-right: 66%;
+    margin-right: 50%;
 }
 
 
@@ -336,9 +393,10 @@ section.banner{
     top:4.45em;
     z-index: 0;
     opacity:30%;
+    z-index: 0;
 }
 
-.banner>p, .banner>h1{
+.banner>p, .banner>h1, .banner>a{
     z-index: 90;
 }
 
@@ -393,7 +451,7 @@ section.about{
     display: flex;
 }
 
-.projects img{
+.projects a img{
     width: 31.5%;
     aspect-ratio: 1;
     object-fit: fill;
@@ -404,6 +462,17 @@ section.about{
     opacity:100%;
     display: block;
 }
+
+.projects.art>div{
+    width: 32%;
+    aspect-ratio: 3/4;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    display: flex;
+}
+
 
 .projects a:hover img{
 }
@@ -423,11 +492,18 @@ section.about{
     gap: 0.5em;
     background-color: rgba(255, 255, 255, 0.75);  
     backdrop-filter: blur(4px);
-
     display: none;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.projects.art>div>div{
+    display:flex;
+    aspect-ratio: auto;
+    justify-content: left;
+    text-align: left;
+    padding-left: 0;
 }
 
 .projects a:hover{
@@ -449,7 +525,19 @@ section.about{
 
 
 @media screen and (max-width: 1200px) { 
-   
+   .project-page main{
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .project-page main>sub, .project-page main>p{
+        margin-bottom: 3em;
+        margin-right: 40%;
+    }
+
+    section.project-header{
+        padding: 4em 20% 2.5em 0;
+    }
 
 }
 
@@ -494,6 +582,34 @@ section.about{
         background-size: cover;
         box-sizing: border-box;
         display: flex;
+    }
+
+    .project-page main{
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        row-gap: 1em;
+    }
+
+    .project-page main>sub, .project-page main>p{
+        margin-bottom: 3em;
+        margin-right: 20%;
+    }
+
+    section.project-header{
+        padding: 2em 20% 2.5em 0;
+    }
+
+    .image-row{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 1em;
+
+    }
+
+    .image-row .half-width, .image-row .sixty-width, .image-row .thirty-width{
+        width: 100%;
+        height: auto;
     }
 
     .header-logo>img{
