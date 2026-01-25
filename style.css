@@ -227,6 +227,18 @@ header{
     text-decoration: none;
 }
 
+/* prefooter*/
+
+.prefooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.prefooter>a, .prefooter>a>h2{
+    text-decoration: none;
+}
 
 
 /* footer */
@@ -282,7 +294,7 @@ main{
     margin-top: 10em;
     bottom:0;
     background-image: none;
-    height: 10em;
+    height: 2em;
 }
 
 
@@ -377,7 +389,8 @@ section.banner{
     width: 100vw;
     height: 23vw;
     box-sizing: border-box;
-    padding: 0.25em 50% 2.5em 7em;
+    margin-bottom: 2em;
+    padding: 0.25em 50% 0 7em;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -386,14 +399,17 @@ section.banner{
 
 .banner>img{
     width:100vw;
-    height: 23vw;
+    height: 27vw;
     position: absolute;
     object-fit: cover;
     left:0;
     top:4.45em;
     z-index: 0;
-    opacity:30%;
     z-index: 0;
+}
+
+.banner-shape{
+    margin-top: 5vw;
 }
 
 .banner>p, .banner>h1, .banner>a{
@@ -452,7 +468,7 @@ section.about{
 }
 
 .projects a img{
-    width: 31.5%;
+    width: 32%;
     aspect-ratio: 1;
     object-fit: fill;
     position: relative;
@@ -465,7 +481,7 @@ section.about{
 
 .projects.art>div{
     width: 32%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 1;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -540,14 +556,44 @@ section.about{
         padding: 4em 20% 2.5em 0;
     }
 
+    section.banner{
+        width: 100vw;
+        height: 30vw;
+        box-sizing: border-box;
+        padding: 5em 30% 0 7em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        justify-content: end;
+    }
+
+    .banner>img{
+        width:100vw;
+        height: 30vw;
+        position: absolute;
+        object-fit: cover;
+        left:0;
+        top:4.45em;
+        z-index: 0;
+        /* opacity:30%; */
+        z-index: 0;
+    }
+
+    .banner-shape{
+        margin-top: 3vw; 
+    }
+
 }
 
 @media screen and (max-width: 800px) {
+    main{
+        padding-top: 4.5em;
+    }
     section.banner{
         width: 100vw;
-        height: 35vw;
+        height: 50vh;
         box-sizing: border-box;
-        padding: 0.25em 5% 1em 5%;
+        padding: 0.25em 5% 5em 5%;
         padding-top: auto;
         display: flex;
         flex-direction: column;
@@ -557,13 +603,12 @@ section.about{
 
     .banner>img{
         width:100vw;
-        height: 35vw;
-        /* position: absolute;
-        object-fit: cover;
-        left:0;
-        top:4.45em;
-        z-index: 0;
-        opacity:30%; */
+        height: 50vh;
+        top:0;
+    }
+
+    .banner-shape{
+        margin-top: 10vh;
     }
 
     .projects{
