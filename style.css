@@ -427,6 +427,7 @@ section.about{
     flex-direction: row;
     justify-content: space-between;
     z-index: 100;
+    gap: 8%;
 }
 
 .about div{
@@ -441,6 +442,7 @@ section.about{
     aspect-ratio: 3/4 !important;
     z-index: 100;
     object-fit: cover;
+    max-width: 60%;
 }
 
 
